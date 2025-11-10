@@ -11,6 +11,7 @@ set :root,  File.dirname(__FILE__)
 set :views, Proc.new { File.join(root, 'views') }
 
 get '/' do
+  @title = 'らんてくんの家計簿'
   erb :index
 end
 
