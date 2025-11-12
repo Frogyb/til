@@ -12,6 +12,7 @@ set :views, Proc.new { File.join(root, 'views') }
 
 get '/' do
   @title = 'らんてくんの家計簿'
+  @categories = db.execute 'SELECT * FROM categories'
   erb :index
 end
 
