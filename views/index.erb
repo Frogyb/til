@@ -33,14 +33,13 @@
         </div>
 
         <div class="ml-6">
-          <label class="text-sm font-bold">カテゴリー</label>
-          <select name="category_id" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3 pr-4">
-            <option value="1">日用品費</option>
-            <option value="2">交際費</option>
-            <option value="3">食費</option>
-            <option value="4">雑費</option>
-          </select>
-        </div>
+  <label class="text-sm font-bold">カテゴリー</label>
+  <select name="category_id" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-3 pr-4">
+    <% @categories.each do |category| %>
+      <option value="<%= category[0] %>"><%= category[1] %></option>
+    <% end %>
+  </select>
+</div>
         
         <div class="ml-6">
           <label class="text-sm font-bold">内容</label>
